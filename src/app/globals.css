@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 h1,
-a {
+a,li,ul {
   all: revert;
   margin: 0;
 }
