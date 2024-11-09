@@ -1,8 +1,7 @@
 import dateformat from "dateformat";
-import Image from "next/image";
 import { getAllPageCount, getAllVaNumber, getIaUrlCache, getTitle, getVaNumberList } from "../../../loadJson";
-import { chunk } from "../../../chunk";
-import { SITE_PER_PAGE } from "../../../ppv";
+import "./style.css";
+
 type PageType = {
   searchParams: Promise<Record<string, any>>,
   params: Promise<{
@@ -23,7 +22,7 @@ export default async function Page(context: PageType) {
     const fullUrl = `https://hp.vector.co.jp/authors/${vaIdStr}/`;
     vaElementList.push(
       <h1 className="flex gap-4 items-baseline sticky top-[0px] bg-[canvas] z-[1]" key={`h1-${vaIdStr}`}>
-        <a href={fullUrl} id={`VA${String(vaIdNum).padStart(6, "0")}`}>VA.{vaIdNum}</a>
+        <a href={fullUrl}>VA.{vaIdNum}</a>
         <span className="text-sm font-normal">{index}/{allVaList.length}</span>
         <span className="text-sm font-normal">{title}</span>
       </h1>
@@ -61,7 +60,7 @@ export default async function Page(context: PageType) {
       }
       vaElementList.push(<IASavedUrlTable datas={datas} key={`hia1-${vaIdStr}`}></IASavedUrlTable>);
     }
-    elementList.push(<div key={vaIdStr}>{vaElementList}</div>)
+    elementList.push(<div key={vaIdStr} className="p-1" id={`VA${String(vaIdNum).padStart(6, "0")}`}>{vaElementList}</div>)
   }
   return (
     <div className="container mx-auto font-mono">
