@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
-  basePath: "/vector-hp-archive-viewer",
+  basePath: process.env["NEXT_PUBLIC_BASE_DIR"],
   distDir: ".ssg-output/vector-hp-archive-viewer",
 };
 

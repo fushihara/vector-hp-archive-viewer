@@ -1,9 +1,7 @@
 import dateformat from "dateformat";
 import { getAllPageCount, getAllVaNumber, getIaUrlCache, getTitle, getVaNumberList } from "../../../loadJson";
 import "./style.css";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
-import Head from "next/head";
+import Link2 from "next/link";
 
 type PageType = {
   searchParams: Promise<Record<string, any>>,
@@ -150,19 +148,19 @@ function PagenationElement(prop: PagenationProp & { basePath: string }) {
   for (const e of createPagenation(prop)) {
     if (e.type == "back") {
       if (e.link != null) {
-        elementList.push(<Link href={getUrl(e.link)} key={e.key} className={`${baseClassVal}`}>＜</Link>);
+        elementList.push(<Link2 href={getUrl(e.link)} key={e.key} className={`${baseClassVal}`}>＜</Link2>);
       } else {
         elementList.push(<span key={e.key} className={`${baseClassVal}`}>＜</span>);
       }
     } else if (e.type == "next") {
       if (e.link != null) {
-        elementList.push(<Link href={getUrl(e.link)} key={e.key} className={`${baseClassVal}`}>＞</Link>);
+        elementList.push(<Link2 href={getUrl(e.link)} key={e.key} className={`${baseClassVal}`}>＞</Link2>);
       } else {
         elementList.push(<span key={e.key} className={`${baseClassVal}`}>＞</span>);
       }
     } else if (e.type == "num") {
       if (e.link != null) {
-        elementList.push(<Link href={getUrl(e.link)} key={e.key} className={`${baseClassVal}`}>{e.num}</Link>);
+        elementList.push(<Link2 href={getUrl(e.link)} key={e.key} className={`${baseClassVal}`}>{e.num}</Link2>);
       } else {
         elementList.push(<span key={e.key} className={`${baseClassVal} bg-[cyan]`}>{e.num}</span>);
       }

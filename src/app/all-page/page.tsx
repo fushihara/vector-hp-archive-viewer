@@ -1,8 +1,7 @@
-import { sprintf } from "sprintf-js";
 import { getAllVaAndTitle } from "../../loadJson";
-import Link from "next/link";
 import { SITE_PER_PAGE } from "../../ppv";
 import { Metadata } from "next";
+import Link2 from "../_components/link2";
 
 export default async function Page() {
   const obj2 = await getAllVaAndTitle()
@@ -39,7 +38,7 @@ function IASavedUrlTable(prop: IASavedUrlTableProp) {
     if (data.lastTitle != null) {
       titleElement = <>{data.lastTitle}</>
     }
-    const indexLink = <Link href={`/archive-files/page-${Math.floor(indexRaw / SITE_PER_PAGE) + 1}/#VA${vaStr}`}>{indexStr}</Link>
+    const indexLink = <Link2 href={`/archive-files/page-${Math.floor(indexRaw / SITE_PER_PAGE) + 1}/#VA${vaStr}`}>{indexStr}</Link2>
     trElementList.push(
       <tr className="transition duration-300 ease-in-out hover:bg-gray-100" key={`${data.vaNumber}`}>
         <td className="border border-black px-1 py-0 text-right">{indexLink}</td>

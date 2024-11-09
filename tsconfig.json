@@ -33,8 +33,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".ssg-output/test/types/**/*.ts",
+    ".ssg-output/vector-private-hp-archive/types/**/*.ts",
     "next-env.d.ts",
-    ".ssg-output/vector-private-hp-archive/types/**/*.ts"
+    ".ssg-output/vector-hp-archive-viewer/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
