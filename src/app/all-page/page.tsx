@@ -2,6 +2,7 @@ import { sprintf } from "sprintf-js";
 import { getAllVaAndTitle } from "../../loadJson";
 import Link from "next/link";
 import { SITE_PER_PAGE } from "../../ppv";
+import { Metadata } from "next";
 
 export default async function Page() {
   const obj2 = await getAllVaAndTitle()
@@ -11,6 +12,10 @@ export default async function Page() {
     </div>
   );
 }
+export const metadata: Metadata = {
+  title: "Vectorアーカイブ 全サイト一覧",
+};
+
 type IASavedUrlTableProp = {
   datas: {
     vaNumber: number,
