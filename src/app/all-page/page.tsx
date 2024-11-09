@@ -38,11 +38,12 @@ function IASavedUrlTable(prop: IASavedUrlTableProp) {
     if (data.lastTitle != null) {
       titleElement = <>{data.lastTitle}</>
     }
-    const indexLink = <Link2 href={`/archive-files/page-${Math.floor(indexRaw / SITE_PER_PAGE) + 1}/#VA${vaStr}`}>{indexStr}</Link2>
+    const indexLink = <Link2 href={`/archive-files/page-${Math.floor(indexRaw / SITE_PER_PAGE) + 1}/#VA${vaStr}`}>ファイル表示</Link2>
     trElementList.push(
       <tr className="transition duration-300 ease-in-out hover:bg-gray-100" key={`${data.vaNumber}`}>
-        <td className="border border-black px-1 py-0 text-right">{indexLink}</td>
+        <td className="border border-black px-1 py-0 text-right">{indexStr}</td>
         <td className="border border-black px-1 py-0 text-right">{data.vaNumber}</td>
+        <td className="border border-black px-1 py-0 text-right">{indexLink}</td>
         <td className="border border-black px-1 py-0 text-left">{titleElement}</td>
         <td className="border border-black px-1 py-0 text-left" title="オリジナルのURL"><a href={originalUrl}>{originalUrl}</a></td>
         <td className="border border-black px-1 py-0 text-left" title="vector本家の作者のプロフィールページ"><a href={vectorProfileUrl}>www.vector.co.jp</a></td>
@@ -55,12 +56,13 @@ function IASavedUrlTable(prop: IASavedUrlTableProp) {
     <table className="border-collapse bg-white text-sm font-light text-gray-900 ">
       <thead className="text-md sticky top-0 bg-gray-100 font-medium">
         <tr>
-          <th scope="col" className="whitespace-nowrap border border-black px-1 text-right" title="全サイトの通し番号">No</th>
+          <th scope="col" className="whitespace-nowrap border border-black px-1 text-right" title="全サイトの通し番号">連番No</th>
           <th scope="col" className="whitespace-nowrap border border-black px-1 text-right" title="URLの一部のVA～ の部分の数字">VA</th>
+          <th scope="col" className="whitespace-nowrap border border-black px-1 text-right">ファイル表示</th>
           <th scope="col" className="whitespace-nowrap border border-black px-1 text-left">サイト名</th>
           <th scope="col" className="whitespace-nowrap border border-black px-1 text-left">オリジナルURL</th>
           <th scope="col" className="whitespace-nowrap border border-black px-1 text-left">作者ページ</th>
-          <th scope="col" className="whitespace-nowrap border border-black px-1 text-left">IAのURL</th>
+          <th scope="col" className="whitespace-nowrap border border-black px-1 text-left">InternetArchiveの検索ページ</th>
         </tr>
       </thead>
       <tbody>

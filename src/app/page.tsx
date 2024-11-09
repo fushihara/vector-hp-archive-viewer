@@ -1,6 +1,10 @@
+import Link2 from "./_components/link2";
+
 export default async function Home() {
   return (
     <div className="container mx-auto font-mono">
+      <h1><Link2 href="/all-page/">全サイト一覧はこちら</Link2></h1>
+      <p>約6000サイトを確認しています。PC推奨</p>
       <h1>このサイトについて</h1>
       <p>2024/12/20に閉鎖される、1990年代からVectorが提供していたホームページサービス hp.vector のアーカイブへのリンク集です。このサイトに対象サイトのファイルは含まれていません。</p>
       <p>source: <a href="https://www.itmedia.co.jp/news/articles/2407/18/news117.html">itmedia</a> , <a href="https://internet.watch.impress.co.jp/docs/yajiuma/1609184.html">internet watch</a></p>
