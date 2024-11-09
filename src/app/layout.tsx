@@ -19,7 +19,7 @@ export default function RootLayout({
         {children}
         <div>
           全てのデータは<a href="https://www.vector.co.jp/" target="_blank" className="original-href">vector</a>より。
-          Github:<a href="https://github.com/fushihara/xxxx" target="_blank" className="original-href">archive</a> , <a href="https://github.com/fushihara/xxxx" target="_blank" className="original-href">crawler</a>
+          Github:<a href="https://github.com/fushihara/vector-hp-archive-viewer" target="_blank">viewer</a> , <a href="https://github.com/fushihara/vector-hp-archive-crawler" target="_blank" className="original-href">crawler</a>
         </div>
       </body>
     </html>
