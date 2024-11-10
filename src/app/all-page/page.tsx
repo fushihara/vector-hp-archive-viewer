@@ -23,7 +23,6 @@ type IASavedUrlTableProp = {
 };
 function IASavedUrlTable(prop: IASavedUrlTableProp) {
   const trElementList: JSX.Element[] = [];
-  const numFormat = new Intl.NumberFormat('en-US');
   if (prop.datas.length == 0) {
     throw new Error();
   }

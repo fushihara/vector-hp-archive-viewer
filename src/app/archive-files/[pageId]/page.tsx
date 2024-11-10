@@ -108,7 +108,6 @@ function IASavedUrlTable(prop: IASavedUrlTableProp) {
   const maxFileSize = prop.datas.map(d => d.fileSizeByte).reduce((a, b) => Math.max(a, b), 0);
   prop.datas.forEach(data => {
     const sizeBackgroundWidth = (data.fileSizeByte / maxFileSize) * 100;
-    let x: string = dateformat(new Date(data.IASavedTimeMs), "yyyy/mm/dd HH:MM:ss");;
     trElementList.push(
       <tr className="transition duration-300 ease-in-out hover:bg-gray-100" key={`${data.IAFullUrl}`}>
         <td className="border border-black px-1 py-0 text-right">{data.statusCode}</td>
