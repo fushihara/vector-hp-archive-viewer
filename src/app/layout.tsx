@@ -7,11 +7,7 @@ export const metadata: Metadata = {
   description: "2004/12に閉鎖したVectorの個人サイトをアーカイブします",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="ja">
       <body className={``} >

@@ -1,7 +1,7 @@
 import dateformat from "dateformat";
 import { getAllPageCount, getAllVaNumber, getIaUrlCache, getTitle, getVaNumberList } from "../../../loadJson";
 import "./style.css";
-import Link2 from "next/link";
+import Link2 from "../../_components/link2";
 
 type PageType = {
   searchParams: Promise<Record<string, any>>,
